@@ -1,0 +1,15 @@
+.sidebar {
+  width: 17%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: aqua;
+}
+
+.sidebar .logo img {
+  height: 50px;
+}
+
+.sidebar .logo {
+  padding: 7% 10%;
+}
