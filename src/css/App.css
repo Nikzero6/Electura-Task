@@ -1,3 +1,8 @@
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .sidebar {
   width: 17%;
   top: 0;
@@ -6,10 +11,31 @@
   background-color: aqua;
 }
 
-.sidebar .logo img {
-  height: 50px;
+.header .logo img {
+  height: 35px;
 }
 
-.sidebar .logo {
-  padding: 7% 10%;
+.header .logo {
+  padding: 10px;
+}
+
+.navbar {
+  background-image: linear-gradient(to right, aqua, #64DFDF);
+  padding: 5px 15px;
+}
+.nav-link {
+  color: inherit;
+}
+.nav-link.btn-danger {
+  color: white;
+}
+.nav-link.shoppingCart {
+  margin-top: -0.5rem;
+}
+form .searchBar {
+  border-radius: 0.25rem 0 0 0.25rem;
+  margin-left: 0.5rem;
+}
+form .searchBtn {
+  border-radius: 0 0.25rem 0.25rem 0;
 }
