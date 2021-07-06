@@ -3,7 +3,7 @@ First of all sorry, i was getting late and my file was not uploading (big in siz
 
 [zip file folder]{https://drive.google.com/drive/folders/11LlhUdhRgjUpQmsCkkF7WpLoI57UltdO?usp=sharing}
 
-## How to ron on local machine
+## How to run on local machine
 - Extract the .rar file.
 - requisites node.js, npm/yarn installed.
 - On any command line interface ex: cdm, bash, powershell.
