@@ -1,9 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import {FaUserCircle, FaHome, FaCompass, FaBookReader, FaLanguage} from 'react-icons/fa';
 import {IoSettings} from 'react-icons/io5';
 import {MdAccountBox} from 'react-icons/md'
 import {BiChevronRight, BiChevronLeft} from 'react-icons/bi';
+
+import {NavLink} from "react-router-dom";
+
 
 function Sidebar() {
 
@@ -23,7 +26,7 @@ function Sidebar() {
       var sideNav6 = new SideNav("", "language", <FaLanguage/>);
       
     const [nav, setNav] = useState([
-        sideNav1, sideNav2, sideNav3, sideNav4, sideNav5, sideNav6
+        sideNav1, sideNav2, sideNav3, sideNav5
     ])
 
     const [currentPage, setCurrentPage] = useState("/");
@@ -32,10 +35,10 @@ function Sidebar() {
     for(let i=0; i < nav.length; i++){
         navigation.push(
         <li key={"nav" + i + "-" + nav[i].slug}>
-            <a href={nav[i].slug} className={"link noul flex c333" + (currentPage === nav[i].slug ? " on" : "")}>
+            <NavLink to={nav[i].slug} className={"link noul flex c333" + (currentPage === nav[i].slug ? " on" : "")}>
                 <div className={"ico s20"}>{nav[i].icon}</div>
                 <h2 className="lbl s15">{nav[i].label}</h2>
-            </a>
+            </NavLink>
         </li>
         );
     }
@@ -55,7 +58,7 @@ function Sidebar() {
         if(isActive){
             setNav([newSidenav1, newsideNav2, newsideNav3, newsideNav4, newsideNav5, newsideNav6]);
         }else{
-            setNav([sideNav1, sideNav2, sideNav3, sideNav4, sideNav5, sideNav6]);
+            setNav([sideNav1, sideNav2, sideNav3, sideNav5]);
         }
         console.log(isActive);
         console.log(sideNav1.label);
