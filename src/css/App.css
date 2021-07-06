@@ -572,7 +572,15 @@ OAUTH VIEW
 .oauth-view .__phonesigner__{
   margin: 10px 0px 20px 0px;
 }
+/*
+Splash
+*/
+.splash{}
+.splash img{
+    height: 100px;
+}
 
+/*
 /* --------------------------------------------------- */
 
 .app-content{
@@ -583,3 +591,43 @@ OAUTH VIEW
 .App{
   padding: 0px 20px 0px 0px;
 } */
+
+
+.sidebar .me{
+  padding: 20px 40px;
+}
+.sidebar .me .photo{
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-right: 10px;
+  background: #eee;
+}
+.sidebar .me .photo img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.sidebar .me .lbl{}
+
+.sidebar .me .link{}
+.sidebar .me .link .ico{
+  width: 50px;
+  height: 50px;
+  background: #ea5252;
+  border-radius: 100%;    
+  margin-right: 10px;
+}
+.sidebar .me .link .ico:before{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sidebar .me .link .lbl{}
+
+.app-content{
+  flex: 2;
+  padding: 20px 40px 20px 20px;
+}

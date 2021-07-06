@@ -75,7 +75,26 @@ function Sidebar() {
                 {navigation}
             </ul>
             <button className="btn btn-dark bg-transparent sidebarToggler s24" onClick={handleToggle}>{isActive ? <BiChevronRight/> : <BiChevronLeft/>}</button>
+        
+            <div className="me flex aic">
+                {global.fire.ID ? <React.Fragment><div className="photo cfff s24">
+                    <img src="http://placeimg.com/100/100/people" className="bl" />
+                </div>
+                <div className="lbl s15 fontb c333">
+                    Nikhil rai
+                    <h2 className="uname s13 c777">@Nikhil Rai</h2>                 
+                </div>
+                </React.Fragment>
+                : 
+                <NavLink to={"oauth"} className={"aic link noul flex c333"}>
+                    <div className={"ico s24 rel cfff"}><FaUserCircle/></div>
+                    <h2 className="lbl s20 fontb">Sign in</h2>
+                </NavLink>
+                }
+            </div>
         </div>
+
+        
     )
 }
 
