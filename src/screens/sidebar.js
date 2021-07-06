@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, {useState, useEffect} from "react";
-import {FaUserCircle, FaHome, FaCompass, FaBookReader, FaLanguage} from 'react-icons/fa';
+import {FaUserCircle, FaHome, FaCompass, FaBookReader, FaLanguage, FaPowerOff} from 'react-icons/fa';
 import {IoSettings} from 'react-icons/io5';
 import {MdAccountBox} from 'react-icons/md'
 import {BiChevronRight, BiChevronLeft} from 'react-icons/bi';
@@ -67,9 +68,9 @@ function Sidebar() {
 
     return (
         <div className={`sidebar fixed ${isActive ? "" : "expand"}`}>
-            <a href="profile"className={`user bl ${isActive ? "s15" : "s20"}`}>
+            <NavLink to={"profile"} className={`user bl ${isActive ? "s15" : "s20"}`}>
                 <FaUserCircle/> Username
-            </a>
+            </NavLink>
             <hr className="sidebar-hr"></hr>
             <ul className="nav">
                 {navigation}
@@ -78,7 +79,7 @@ function Sidebar() {
         
             <div className="me flex aic">
                 {global.fire.ID ? <React.Fragment><div className="photo cfff s24">
-                    <img src="http://placeimg.com/100/100/people" className="bl" />
+                    <img src="http://placeimg.com/100/100/people" className="bl" alt="place-img"/>
                 </div>
                 <div className="lbl s15 fontb c333">
                     Nikhil rai
@@ -87,8 +88,8 @@ function Sidebar() {
                 </React.Fragment>
                 : 
                 <NavLink to={"oauth"} className={"aic link noul flex c333"}>
-                    <div className={"ico s24 rel cfff"}><FaUserCircle/></div>
-                    <h2 className="lbl s20 fontb">Sign in</h2>
+                    <div className={"ico s24 rel cfff"}><FaPowerOff/></div>
+                    <h2 className="lbl s20 fontb">{isActive ? "" : "Sign in"}</h2>
                 </NavLink>
                 }
             </div>

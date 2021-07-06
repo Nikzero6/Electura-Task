@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-vars */
 import React, {useState, useEffect} from "react";
 import Course1 from "../ui/course-1.jpg";
 import Course2 from "../ui/course-2.png";
@@ -166,7 +168,7 @@ function HomePage(){
 
                     <div className="user abs aic flex">
                         <div className="pic">
-                            <img src={popularCourse[i].tutor.dp} className="bl" />
+                            <img src={popularCourse[i].tutor.dp} className="bl" alt="popular-course-tutor"/>
                         </div>
                         <div className="meta rel">
                             <h2 className="s15 name fontb cfff">{popularCourse[i].tutor.name}</h2>
@@ -192,7 +194,7 @@ function HomePage(){
             <a href="#" className="user-block rel noul" key={"top-tutors-" + i}>
                 <div className="user aic flex">
                     <div className="pic">
-                        <img src={topTutors[i].dp} className="bl" />
+                        <img src={topTutors[i].dp} className="bl" alt="top-tutor-pic"/>
                     </div>
                     <div className="meta rel">
                         <h2 className="s15 name fontb c333">{topTutors[i].name}</h2>
@@ -209,7 +211,7 @@ function HomePage(){
             <a href="#" className="user-block rel noul" key={"top-categories-" + i}>
                 <div className="user aic flex">
                     <div className="pic">
-                        <img src={topCategories[i].dp} className="bl" />
+                        <img src={topCategories[i].dp} className="bl" alt="top-categories-icon"/>
                     </div>
                     <div className="meta rel">
                         <h2 className="s15 name fontb c333">{topCategories[i].name}</h2>

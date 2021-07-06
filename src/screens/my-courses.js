@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-vars */
 import React, {useState, useEffect} from "react";
 import Course1 from "../ui/course-1.jpg";
 import Course2 from "../ui/course-2.png";
@@ -100,7 +102,7 @@ function CoursesPage(){
 
                     <div className="user abs aic flex">
                         <div className="pic">
-                            <img src={popularCourse[i].tutor.dp} className="bl" />
+                            <img src={popularCourse[i].tutor.dp} className="bl" alt="popoular-course-tutor"/>
                         </div>
                         <div className="meta rel">
                             <h2 className="s15 name fontb cfff">{popularCourse[i].tutor.name}</h2>
@@ -131,13 +133,11 @@ function CoursesPage(){
             <div className="row justify-content-center fullscreen align-items-center">
                 <div className="col-lg-5 col-md-8 home-banner-left">
                 <h1 className="text-white">
-                    Take the first step <br />
-                    to learn with us
+                    Courses <br />
+                    Just for You!
                  </h1>
                  <p className="mx-auto text-white  mt-20 mb-40">
-                In the history of modern astronomy, there is probably no one
-                greater leap forward than the building and launch of the space
-                telescope known as the Hubble.
+                Start learning today!
                 </p>
             </div>
             <div className="offset-lg-2 col-lg-5 col-md-12 home-banner-right">

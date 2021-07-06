@@ -4,6 +4,8 @@ import logo from '../ui/logo.svg';
 import {FaSearch, FaShoppingCart} from 'react-icons/fa';
 import {BiChevronDownCircle, BiChevronRight} from 'react-icons/bi';
 
+import {NavLink} from "react-router-dom";
+
 function Navbar() {
   return ( 
     <div className = "header">
@@ -54,7 +56,7 @@ function Navbar() {
 
           <a className="nav-link  mx-2 s24" href="#"><FaShoppingCart/></a>
           <a className="nav-link btn btn-sm btn-outline-dark" href="#">Login</a>
-          <a className="nav-link btn btn-sm btn-danger mx-2" href="#">Signup</a>
+          <NavLink className="nav-link btn btn-sm btn-danger mx-2" to={"oauth"}>Signup</NavLink>
           
         </div>
       </nav>

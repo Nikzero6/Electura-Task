@@ -138,7 +138,7 @@ form .searchBtn {
   box-shadow: #37423b 2px 4px 30px -1px;
 }
 .sidebar .nav{
-  padding: 30px 20px 20px;
+  padding: 30px 20px 0px;
 }
 .sidebar .nav li a{
   padding: 10px 20px 20px 15px;
@@ -544,7 +544,6 @@ OAUTH VIEW
   margin: 100px auto;
 }
 .oauth-view-verify{width: 420px;}
-.oauth-view .otitle{}
 .oauth-view .oline{
   margin-bottom: 30px;
   margin-top: 10px;
@@ -575,7 +574,6 @@ OAUTH VIEW
 /*
 Splash
 */
-.splash{}
 .splash img{
     height: 100px;
 }
@@ -594,7 +592,8 @@ Splash
 
 
 .sidebar .me{
-  padding: 20px 40px;
+  padding: 0 25px 20px;
+  text-align: center;
 }
 .sidebar .me .photo{
   width: 50px;
@@ -609,14 +608,12 @@ Splash
   height: 100%;
   border-radius: 50%;
 }
-.sidebar .me .lbl{}
 
-.sidebar .me .link{}
 .sidebar .me .link .ico{
-  width: 50px;
-  height: 50px;
-  background: #ea5252;
-  border-radius: 100%;    
+  width: 40px;
+  height: 40px;
+  background: var(--bs-red);
+  border-radius: 100%;
   margin-right: 10px;
 }
 .sidebar .me .link .ico:before{
@@ -625,7 +622,6 @@ Splash
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.sidebar .me .link .lbl{}
 
 .app-content{
   flex: 2;

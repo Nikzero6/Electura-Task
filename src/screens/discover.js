@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-vars */
 import React, {useState, useEffect} from "react";
 import Course1 from "../ui/course-1.jpg";
 import Course2 from "../ui/course-2.png";
@@ -13,7 +15,7 @@ function DiscoverPage(){
     const [popularCourse, setPopularCourse] = useState([
         {
             ID: 1,
-            title: "Learning How to Create Beautiful Scenes in Illustrator in 60 minutes",
+            title: "Learning How to Create Beautiful websites in 60 minutes",
             tutor: {
                 ID: 1,
                 name: "Lana Marandina",
@@ -25,7 +27,7 @@ function DiscoverPage(){
         },
         {
             ID: 2,
-            title: "Creating a beautiful Portrait Illustration. Learning new Technics and Tricks.",
+            title: "Creating a machine learning project. Learning new Technics and Tricks.",
             tutor: {
                 ID: 2,
                 name: "Uran Design",
@@ -37,7 +39,7 @@ function DiscoverPage(){
         },
         {
             ID: 3,
-            title: "Creating a beautiful Portrait Illustration. Learning new Technics and Tricks.",
+            title: "Creating a backend project. Learning new Technics and Tricks.",
             tutor: {
                 ID: 3,
                 name: "Uran Design",
@@ -59,12 +61,12 @@ function DiscoverPage(){
         },
         {
             ID: 2,
-            name: "Python",
+            name: "Web Development",
             dp: "http://placeimg.com/100/100/people?tutors-" + 2,
         },        
         {
             ID: 3,
-            name: "Python",
+            name: "C++ Programming",
             dp: "http://placeimg.com/100/100/people?tutors-" + 3,
         },
         {
@@ -96,7 +98,7 @@ function DiscoverPage(){
 
                     <div className="user abs aic flex">
                         <div className="pic">
-                            <img src={popularCourse[i].tutor.dp} className="bl" />
+                            <img src={popularCourse[i].tutor.dp} className="bl" alt="ppulacourse-tutor-pic"/>
                         </div>
                         <div className="meta rel">
                             <h2 className="s15 name fontb cfff">{popularCourse[i].tutor.name}</h2>
@@ -123,7 +125,7 @@ function DiscoverPage(){
             <a href="#" className="user-block rel noul" key={"top-categories-" + i}>
                 <div className="user aic flex">
                     <div className="pic">
-                        <img src={topCategories[i].dp} className="bl" />
+                        <img src={topCategories[i].dp} className="bl" alt="top-categories-img"/>
                     </div>
                     <div className="meta rel">
                         <h2 className="s15 name fontb c333">{topCategories[i].name}</h2>
@@ -143,13 +145,11 @@ function DiscoverPage(){
             <div className="row justify-content-center fullscreen align-items-center">
                 <div className="col-lg-5 col-md-8 home-banner-left">
                 <h1 className="text-white">
-                    Take the first step <br />
-                    to learn with us
+                    Explore and <br />
+                    Start Learning.
                  </h1>
                  <p className="mx-auto text-white  mt-20 mb-40">
-                In the history of modern astronomy, there is probably no one
-                greater leap forward than the building and launch of the space
-                telescope known as the Hubble.
+                We provide the best content.
                 </p>
             </div>
             <div className="offset-lg-2 col-lg-5 col-md-12 home-banner-right">

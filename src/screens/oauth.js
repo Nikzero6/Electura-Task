@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, {useState, useEffect} from "react";
 import countriesList from "./countries";
 import NumericInput from "../comps/NumericInput";
@@ -10,7 +11,7 @@ function AccountPage(props){
     const [view, setView] = useState("numview");
     const [loading, setLoading] = useState(false);
     const [mod, setMod] = useState("sendcode");
-    const [dialCode, setDialCode] = useState("+92");
+    const [dialCode, setDialCode] = useState("+91");
     const [phone, setPhone] = useState(null);
     const [verificationcode, setVerificationCode] = useState(null);
     const [confirmationResult, setConfirmationResult] = useState(null);
@@ -74,12 +75,12 @@ function AccountPage(props){
         return (
             <div className="oauth-view oauth-view-verify rel">
     
-                {loading == true && <Cover />}
+                {loading === true && <Cover />}
     
                 <h1 className="s40 otitle fontb">Verify Phone Number</h1>
                 <h1 className="s18 oline fontn">Enter verifcation code sent to <span className="fontb">{dialCode + phone}</span></h1>
     
-                <NumericInput defaultValue={verificationcode} onChange={e => {setVerificationCode(e.target.value == "" ? null : e.target.value)}} placeholder="XXXXXX" className="iput s24 fontb" />
+                <NumericInput defaultValue={verificationcode} onChange={e => {setVerificationCode(e.target.value === "" ? null : e.target.value)}} placeholder="XXXXXX" className="iput s24 fontb" />
     
                 <button onClick={()=>{verify()}} className="button s24 fontb cfff">Continue</button>
     
@@ -91,13 +92,13 @@ function AccountPage(props){
         return (
             <div className="oauth-view rel">
     
-                {loading == true && <Cover />}
+                {loading === true && <Cover />}
     
                 <h1 className="s40 otitle fontb">Sign in</h1>
                 <h1 className="s18 oline fontn">Enter your phone number and we will send one-time verifcation code</h1>
     
                 <select defaultValue={dialCode} 
-                    onChange={e => {setDialCode(e.target.value == "" ? null : e.target.value)}}
+                    onChange={e => {setDialCode(e.target.value === "" ? null : e.target.value)}}
                     className="iput s24 fontb">
                     {
                         countriesList.map(e => {
@@ -108,7 +109,7 @@ function AccountPage(props){
                     }
                 </select>
                 
-                <NumericInput defaultValue={phone} onChange={e => {setPhone(e.target.value == "" ? null : e.target.value)}} placeholder="0300 123 4567" className="iput s24 fontb" />
+                <NumericInput defaultValue={phone} onChange={e => {setPhone(e.target.value === "" ? null : e.target.value)}} placeholder="0300 123 4567" className="iput s24 fontb" />
                 
                 <div className="__phonesigner__" id="__phonesigner__" />
 
@@ -119,7 +120,7 @@ function AccountPage(props){
     }
 
     return (
-        mod == "sendcode" ? sendCodeView() : verifyCodeView()
+        mod === "sendcode" ? sendCodeView() : verifyCodeView()
     )
 
 }

@@ -13,12 +13,12 @@ export default class NumericInput extends Component {
                 placeholder={props.placeholder || null}
                 onChange={props.onChange ? props.onChange : ()=>{}}
                 onKeyPress={evt => {
-                    let charCode = evt.which ? evt.which : evt.keyCode,
+                    let charCode = evt.key,
                     txt = evt.target.value;
                     
                     if(
-                        "numonly" in props
-                        && charCode == 46
+                        "numOnly" in props
+                        && charCode === 46
                     ){
                         if(txt.indexOf(".") > -1){
                             evt.preventDefault();
