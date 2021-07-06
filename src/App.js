@@ -8,14 +8,14 @@ import './css/App.css';
 import './css/props.css';
 
 //screens
-import Header from "./screens/header";
+import Navbar from "./screens/navbar";
 import Sidebar from "./screens/sidebar";
 
 function App() {
   return (
     <div className="App">
-        <Header/>
-        {/* <Sidebar/> */}
+        <Navbar/>
+        <Sidebar/>
 
     </div>
   );

@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import logo from '../ui/logo.svg';
-import {FaSearch, FaListUl, FaShoppingCart} from 'react-icons/fa';
+import {FaSearch, FaShoppingCart} from 'react-icons/fa';
+import {BiChevronDownCircle, BiChevronRight} from 'react-icons/bi';
 
-function Header() {
+function Navbar() {
   return ( 
     <div className = "header">
 
@@ -21,17 +23,23 @@ function Header() {
 
           <ul className="navbar-nav mr-auto container-fluid">
            
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                   <FaListUl/> Categories
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">Action</a>
-                <a className="dropdown-item" href="#">Another action</a>
-                <div className="dropdown-divider"></div>
-                <a className="dropdown-item" href="#">Something else here</a>
-              </div>
-            </li>
+          <li class="dropdown"><a href="#"><span>Categories</span><BiChevronDownCircle/></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span><BiChevronRight/></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>
 
             <li className="nav-item col-8">
                 <form className="d-flex">
@@ -44,7 +52,7 @@ function Header() {
 
           </ul>
 
-          <a className="nav-link  mx-2 fs24 shoppingCart" href="#"><FaShoppingCart/></a>
+          <a className="nav-link  mx-2 s24" href="#"><FaShoppingCart/></a>
           <a className="nav-link btn btn-sm btn-outline-dark" href="#">Login</a>
           <a className="nav-link btn btn-sm btn-danger mx-2" href="#">Signup</a>
           
@@ -55,4 +63,4 @@ function Header() {
   )
 }
 
-export default Header;
+export default Navbar;
