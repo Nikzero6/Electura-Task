@@ -1,4 +1,4 @@
-# Electura Task - Nikhil Rai [(Live-site)](https://electura-task.web.app/)
+# Knowledge-Hub - Nikhil Rai [(Live-site)](https://electura-task.web.app/)
 An educational website like Udemy, Coursera.  
 
 [rar file folder](https://drive.google.com/drive/folders/11LlhUdhRgjUpQmsCkkF7WpLoI57UltdO?usp=sharing)
